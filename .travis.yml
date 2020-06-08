@@ -27,6 +27,7 @@ before_install:
   - nvm install 14.3.0
   - node -v
   - npm -v
+  - npm install react-scripts
 
 install:
   - echo 'frank test'
