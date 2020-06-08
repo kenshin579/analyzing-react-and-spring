@@ -27,7 +27,7 @@ before_install:
   - nvm install 10.15.1
   - node -v
   - npm -v
-  - cd frontend-end && npm install
+  - cd frontend && npm install
 #  - npm install react-scripts
 
 install:
