@@ -7,9 +7,9 @@ branches:
     - master
 
 # Travis CI 서버의 Home
-cache:
-  directories:
-    - '$HOME/.m2/repository'
+#cache:
+#  directories:
+#    - '$HOME/.m2/repository'
 
 before_install:
   - cat /etc/issue
@@ -27,7 +27,7 @@ before_install:
   - nvm install 10.15.1
   - node -v
   - npm -v
-  - cd frontend && npm install && cd ..
+#  - cd frontend && npm install && cd ..
 #  - npm install react-scripts
 
 install:
