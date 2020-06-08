@@ -12,7 +12,7 @@ cache:
     - '$HOME/.m2/repository'
 
 before_install:
-  - chmod +x mvnw
+  - echo /etc/issue
   - node -v
   - npm -v
 
