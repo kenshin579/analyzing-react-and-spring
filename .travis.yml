@@ -34,7 +34,7 @@ install:
   - echo 'frank test'
 
 script:
-  - mvn clean package
+  - mvn clean install
 
 after_script:
   - cat /home/travis/.npm/_logs/*.log
