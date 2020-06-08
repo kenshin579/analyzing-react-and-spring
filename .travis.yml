@@ -20,7 +20,7 @@ install:
   - echo 'frank test'
 
 script:
-  - ./mvnw clean package
+  - mvn clean package
 
 
 # CI 실행 완료시 메일로 알람
