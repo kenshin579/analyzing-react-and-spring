@@ -15,6 +15,9 @@ before_install:
   - cat /etc/issue
   - node -v
   - npm -v
+  - sudo apt-get update
+  - sudo apt-get -y install nodejs
+  - sudo apt-get -y install npm
 
 install:
   - echo 'frank test'
