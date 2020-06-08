@@ -16,8 +16,11 @@ before_install:
   - node -v
   - npm -v
   - sudo apt-get update
-  - sudo apt-get -y install nodejs
-  - sudo apt-get -y install npm
+#  - sudo apt-get -y install nodejs
+#  - sudo apt-get -y install npm
+  - sudo apt-get -y install build-essential libssl-dev
+  - npm cache clean -f
+  - npm install -g n
   - node -v
   - npm -v
 
