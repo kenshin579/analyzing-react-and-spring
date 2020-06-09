@@ -34,10 +34,11 @@ jobs:
     - name: node version
       run: node -v && npm -v
     - name: node install
-      run : |
-        npm install
-        npm run build
+      run : npm install
       working-directory: ./frontend
+    - name: npm run build
+        run: npm run build
+        working-directory: ./frontend
     - name: Generate the package
       run: mvn clean package --file pom.xml -Dmaven.test.skip=true
     - run: ls /home/runner/.npm/_logs/*.log
