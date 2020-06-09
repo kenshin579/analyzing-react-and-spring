@@ -29,8 +29,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - name: OS version
-      run : cat /etc/issue
+#    - name: OS version
+#      run : cat /etc/issue
     - name: node version
       run: node -v && npm -v
     - name: Generate the package
