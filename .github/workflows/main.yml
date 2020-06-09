@@ -32,7 +32,9 @@ jobs:
 #    - name: OS version
 #      run : cat /etc/issue
     - name: node version
-      run: node -v && npm -v
+      run: |
+        node -v
+        npm -v
 #    - name : cache clear
 #      run: npm cache clean --force
     - name: node install
