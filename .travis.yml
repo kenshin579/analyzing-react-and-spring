@@ -7,19 +7,15 @@ branches:
     - master
 
 # Travis CI 서버의 Home
-#cache:
-#  directories:
-#    - '$HOME/.m2/repository'
+cache:
+  directories:
+    - '$HOME/.m2/repository'
 
 before_install:
   - cat /etc/issue
   - node -v
   - npm -v
   - sudo apt-get update
-#  - sudo apt-get purge --auto-remove nodejs
-#  - curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-#  - sudo apt-get -y install nodejs
-#  - sudo apt-get -y install npm
   - sudo apt-get install build-essential libssl-dev
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
   - source ~/.bashrc
@@ -34,7 +30,7 @@ install:
   - echo 'frank test'
 
 script:
-  - mvn clean install
+  - CI=false mvn clean install -Dmaven.test.skip=true
 
 after_script:
   - cat /home/travis/.npm/_logs/*.log
