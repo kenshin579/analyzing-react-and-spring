@@ -37,7 +37,9 @@ jobs:
       run : npm install
       working-directory: ./frontend
     - name: npm run build
-      run: npm run build
+      run: |
+        npm run build
+        cat /home/runner/.npm/_logs/*.log
       working-directory: ./frontend
     - name: Generate the package
       run: mvn clean package --file pom.xml -Dmaven.test.skip=true
