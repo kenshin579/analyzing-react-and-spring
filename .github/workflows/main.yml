@@ -34,6 +34,6 @@ jobs:
     - name: node version
       run: node -v && npm -v
     - name: Generate the package
-      run: mvn clean package --file pom.xml -Dmaven.test.skip=true
-    - name : output
-      run: cat /home/runner/.npm/_logs/*.log
+      run: mvn clean package --file pom.xml -Dmaven.test.skip=true; cat /home/runner/.npm/_logs/*.log
+#    - name : output
+#      run: cat /home/runner/.npm/_logs/*.log
