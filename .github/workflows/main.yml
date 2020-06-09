@@ -27,7 +27,7 @@ jobs:
     - name: OS version
       run : cat /etc/issue
     - name: node version
-        run: node -v
+      run: node -v
     - name: Generate the package
       run: mvn -B package --file pom.xml -Dmaven.test.skip=true
     - name : output
