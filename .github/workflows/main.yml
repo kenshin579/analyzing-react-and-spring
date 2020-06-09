@@ -37,17 +37,16 @@ jobs:
         npm -v
 #    - name : cache clear
 #      run: npm cache clean --force
-    - name: node install
-      run : npm install
-      working-directory: ./frontend
-    - name: npm run build
-      run: CI=false npm run build
-      working-directory: ./frontend
-    - name : check the log file
-      if: ${{ always() }}
-      run: cat /home/runner/.npm/_logs/*.log
+#    - name: node install
+#      run : npm install
+#      working-directory: ./frontend
+#    - name: npm run build
+#      run: CI=false npm run build
+#      working-directory: ./frontend
     - name: Generate the package
       run: mvn clean package --file pom.xml -Dmaven.test.skip=true
-    - run: cat /home/runner/.npm/_logs/*.log
+    - name: check the log file
+      if: ${{ failure() }}
+      run: cat /home/runner/.npm/_logs/*.log
 #    - name : output
 #      run: cat /home/runner/.npm/_logs/*.log
