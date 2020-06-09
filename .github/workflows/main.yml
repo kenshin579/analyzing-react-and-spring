@@ -35,8 +35,8 @@ jobs:
       run: |
         node -v
         npm -v
-#    - name : cache clear
-#      run: npm cache clean --force
+    - name : cache clear
+      run: npm cache clean --force
     - name: node install
       run : npm install
       working-directory: ./frontend
