@@ -33,6 +33,11 @@ jobs:
 #      run : cat /etc/issue
     - name: node version
       run: node -v && npm -v
+    - name: node install
+      run : |
+        npm install
+        npm run build
+      working-directory: ./frontend
     - name: Generate the package
       run: mvn clean package --file pom.xml -Dmaven.test.skip=true
     - run: ls /home/runner/.npm/_logs/*.log
