@@ -25,7 +25,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v1
       with:
         node-version: 10.x
     - name: OS version
